@@ -1,0 +1,250 @@
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: calc(1.5rem + 1vw);
+  font-family: serif;
+  font-weight: 400;
+}
+h2 {
+  font-size: calc(2rem + 1vw);
+  font-family: sans-serif;
+  font-weight: 200;
+}
+h3 {
+  font-size: calc(3rem + 1vw);
+  font-family: sans-serif;
+  font-weight: 200;
+}
+h4,
+h5,
+h6 {
+  font-size: calc(1.5rem + 1vw);
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+p,
+a,
+ul,
+li,
+button {
+  font-size: calc(1rem + 1vw);
+  font-family: sans-serif;
+  font-weight: 100;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* general end */
+
+/* class selectors */
+.header {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.header_nav {
+  box-shadow: 2rem 0rem 2rem rgba(0, 0, 0, 0.507);
+  z-index: 1;
+  position: relative;
+}
+.nav_menu {
+  min-height: 10vh;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_item {
+  position: relative;
+  flex: 1 1 15rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0);
+  box-shadow: 0.2rem 0.2rem 0.2rem rgb(2, 7, 7),
+    0.8rem 0.8rem 0.8rem rgba(0, 0, 0, 0.4);
+}
+.menu_item a {
+  color: white;
+}
+
+/* DROP DOWN MENU */
+.drop-down_menu {
+  display: none;
+}
+.drop-down_menu.active {
+  display: block;
+  position: absolute;
+  color: white;
+  background-color: black;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+}
+.drop-down_menu.active li {
+  padding: 2rem;
+}
+/* DROP DOWN MENU END*/
+
+.header_intro-box {
+  width: 95%;
+  margin: 0 auto;
+  min-height: 50vh;
+  display: flex;
+  gap: 3rem;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.intro-box_link {
+  display: block;
+  border-bottom: 0.4rem solid rgba(255, 255, 255, 0.6);
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+.main_section {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.team_title {
+  line-height: 2;
+  letter-spacing: 3rem;
+  padding: 3rem 0;
+}
+.team_text {
+  line-height: 1.5;
+}
+.gallery {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.gallery_imgs {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+.imgs_img-item {
+  flex: 1 1 25rem;
+}
+.img-item_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.games_list {
+  display: grid;
+  grid-template-rows: repeat(auto, minmax(2rem, 4rem));
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+  min-height: 100vh;
+}
+.list_game {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1.5rem;
+  line-height: 2;
+  padding: 2rem;
+}
+.list_game:first-child {
+  grid-column: 1/4;
+}
+.list_game:nth-child(4) {
+  grid-row: 2/4;
+  grid-column: 3/4;
+}
+.list_game:last-child {
+  grid-column: 1/3;
+}
+.career {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.career_title {
+  flex: 3 1 15rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.career_text {
+  flex: 1 1 15rem;
+}
+.footer {
+  background-color: black;
+}
+.footer_list {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+.links_link {
+  color: white;
+  letter-spacing: 0.2rem;
+}
+.return-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2;
+}
+.return-button a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.return-button a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* class selectors end */
+
+/* id selectors  */
+/* id selectors end */
+
+/* media queries  */
+@media all and (max-width: 1200px) {
+  .games_list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .career {
+    flex-flow: column wrap;
+  }
+}
+/* media queries end */
